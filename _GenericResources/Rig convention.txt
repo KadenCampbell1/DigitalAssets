@@ -1,0 +1,14 @@
+BodyPart_##_Jnt
+
+Spine_01_Jnt
+L_Arm_FK_01_Jnt
+Thumb = Finger_01_Knuckle_01_Jnt
+
+Spine_01_Ctrl_Grp
+Spine_01_Ctrl
+
+suffixes:
+geometry = _Geo
+controls = _Ctrl
+joint = _Jnt
+group = _Grp

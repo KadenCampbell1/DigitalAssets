@@ -7,5 +7,7 @@ def create_joint():
     sels = cmds.ls(sl=True)
 
     for sel in sels:
-        sel_position = cmds.xform(sel, q=True, translation=True, ws=True)
-        joint = cmds.joint(sel, p=(sel_position[0], sel_position[1], sel_position[2]))
+        sel_pos = cmds.xform(sel, q=True, rotatePivot=True, ws=True)
+        cmds.select(cl=True)
+        jnt = cmds.joint(position=[0, 0, 0], absolute=True)
+        cmds.xform(jnt, translation=sel_pos, ws=True)

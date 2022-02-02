@@ -45,4 +45,19 @@ def constrain():
                      f"{rotate_constraint}.w0",
                      force=True)
 
-constrain()
+
+def constrain_joints():
+    sels = cmds.ls(sl=True)
+
+    parent = sels[0]
+    child = sels[1]
+
+    cmds.parentConstraint(parent, child, maintainOffset=True, weight=1)
+    cmds.scaleConstraint(parent, child, maintainOffset=True, weight=1)
+
+
+def scale_segment_off():
+    sels = cmds.ls(sl=True)
+
+    for sel in sels:
+        cmds.setAttr(f"{sel}.segmentScaleCompensate", 0)

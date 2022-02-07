@@ -44,7 +44,7 @@ def create_control():
         orientation = cmds.xform(sel, q=True, rotation=True, worldSpace=True)
 
         # creates curve at location with proper name
-        curve = cmds.circle(n=name)
+        curve = cmds.circle(n=name, normal=(1, 0, 0))
         # places pivot at center point then rotates curve with orientation values
         cmds.xform(curve, centerPivots=True)
         cmds.xform(curve, rotation=orientation)

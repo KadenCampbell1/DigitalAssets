@@ -18,7 +18,7 @@ def replace_selcetion():
             cmds.delete(r_sel)
             sel = cmds.rename(sel, r_name)
             cmds.parent(sel, parent_sel)
-            cmds.makeIdentity(sel, apply=True, translate=1, rotate=1, scale=1, normal=0, preserveNormals=1)
+            # cmds.makeIdentity(sel, apply=True, translate=1, rotate=1, scale=1, normal=0, preserveNormals=1)
 
 
 replace_selcetion()

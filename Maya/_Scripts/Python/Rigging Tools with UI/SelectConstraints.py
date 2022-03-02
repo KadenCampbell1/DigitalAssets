@@ -1,7 +1,11 @@
 import maya.cmds as cmds
 
 
-def select_constraints():
-    sels = cmds.ls(sl=True)
+def select_parent_constraints():
+    sels = cmds.ls(type="parentConstraint")
+    cmds.select(sels)
 
-    # ls has type to select all parent nodes
+
+def select_scale_constraints():
+    sels = cmds.ls(type="scaleConstraint")
+    cmds.select(sels)
